@@ -1,0 +1,46 @@
+{
+  "name": "tempo-chess-clock-animated",
+  "version": "1.0.0",
+  "private": true,
+  "main": "index.js",
+  "scripts": {
+    "start": "expo start",
+    "android": "expo run:android",
+    "ios": "expo run:ios",
+    "web": "expo start --web",
+    "test": "node --test tests/*.test.mjs",
+    "check": "tsc --noEmit",
+    "export:web": "expo export --platform web",
+    "demo": "expo export --platform web && node scripts/export-demo.mjs",
+    "release:check": "node scripts/check-release.mjs",
+    "eas-build-pre-install": "node scripts/verify-release-a1.cjs",
+    "eas-build-post-install": "node scripts/verify-release-a1.cjs",
+    "apk": "node scripts/android-apk.cjs build"
+  },
+  "dependencies": {
+    "@expo/metro-runtime": "~57.0.16",
+    "@react-native-async-storage/async-storage": "2.2.0",
+    "expo": "~57.0.26",
+    "expo-audio": "~57.0.5",
+    "expo-file-system": "~57.0.7",
+    "expo-haptics": "~57.0.3",
+    "expo-keep-awake": "~57.0.2",
+    "expo-media-library": "~57.0.5",
+    "expo-print": "~57.0.2",
+    "expo-sharing": "~57.0.22",
+    "react": "19.2.3",
+    "react-dom": "19.2.3",
+    "react-native": "^0.86.3",
+    "react-native-safe-area-context": "~5.7.0",
+    "react-native-view-shot": "5.1.0",
+    "react-native-web": "^0.21.2"
+  },
+  "devDependencies": {
+    "@types/react": "~19.2.2",
+    "typescript": "~5.9.2"
+  },
+  "overrides": {
+    "regenerate-unicode-properties": "10.3.0",
+    "sandbox-cli-detector": "0.2.0"
+  }
+}

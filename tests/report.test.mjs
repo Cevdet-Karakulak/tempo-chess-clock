@@ -1,0 +1,9 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import {createClock,PRESETS,resume,tap,pause} from '../src/clock.mjs';
+import {createReport,reportHtml,reportSvg} from '../src/report.mjs';
+function game(n=45){let c=createClock(PRESETS[3]);c=tap(c,1,0);for(let i=1;i<=n;i++)c=tap(c,c.active,i*1000);return pause(c,(n+1)*1000);}
+test('PDF contains every recorded press; image deliberately contains last 20',()=>{const report=createReport(game(), 'tr',new Date('2026-10-03T12:00:00Z'));assert.equal(report.rows.length,45);assert.equal(report.rows[0].stage,1);assert.equal((reportHtml(report).match(/<tr>/g)||[]).length,46);const svg=reportSvg(report);assert.equal((svg.match(/stroke="#30414a"/g)||[]).length,20);assert.match(svg,/son 20 basma \/ 45/);assert.match(svg,/Siyah · 13/);assert.doesNotMatch(svg,/Beyaz · 1<\/text>/);});
+test('user-defined labels are escaped in both report formats',()=>{const c=game(2);c.config={...c.config,label:'<script>alert(1)</script> & "club"'};const r=createReport(c,'en');for(const output of [reportHtml(r),reportSvg(r)]){assert.doesNotMatch(output,/<script>/);assert.match(output,/&lt;script&gt;/);assert.match(output,/&amp; &quot;club&quot;/);}});
+test('reports use English labels and simul roles without changing player identity',()=>{const c=game(4);c.config={...c.config,kind:'simul'};const r=createReport(c,'en');assert.equal(r.summaries[0].name,'Exhibitor');assert.equal(r.summaries[1].name,'Opponent');assert.equal(r.labels.average,'Average');assert.equal(r.title,'Move log');assert.equal(r.rows[0].player,'Exhibitor');assert.equal(r.summaries[0].moves,2);});
+test('stages and thinking time are retained in PDF report',()=>{const c=game(1);c.history[0]={...c.history[0],stage:2,spentMs:3456,leftMs:65432};const r=createReport(c,'tr');assert.equal(r.rows[0].stage,2);assert.equal(r.rows[0].spent,'3.5');assert.equal(r.rows[0].left,'01:06');assert.match(reportHtml(r),/<td>2<\/td>/);});

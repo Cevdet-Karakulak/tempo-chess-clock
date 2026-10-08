@@ -1,0 +1,11 @@
+{
+  "fallCompletes": true,
+  "staticRedBladeVisible": true,
+  "remainsAfterCompletion": true,
+  "landscapeAndIpad": true,
+  "restoredFinishedGame": true,
+  "newGameClearsFlag": true,
+  "reduceMotionStaticFlag": true,
+  "nativeDeviceVerificationPending": true,
+  "errors": []
+}

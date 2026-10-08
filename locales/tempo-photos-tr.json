@@ -1,0 +1,5 @@
+{
+  "ios": {
+    "NSPhotoLibraryAddUsageDescription": "Tempo maç özetini Fotoğraflar’a kaydetmek için fotoğraf ekleme izni ister."
+  }
+}

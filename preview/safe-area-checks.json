@@ -1,0 +1,768 @@
+{
+  "checks": [
+    {
+      "scenario": "iphone-status-bar",
+      "language": "tr",
+      "padding": {
+        "top": 20,
+        "bottom": 34,
+        "left": 0,
+        "right": 0
+      },
+      "boxes": {
+        "prepare-header": {
+          "x": 0,
+          "y": 20,
+          "width": 375,
+          "height": 132
+        },
+        "prepare-logo": {
+          "x": 22,
+          "y": 38,
+          "width": 132.390625,
+          "height": 96
+        },
+        "prepare-title": {
+          "x": 166.390625,
+          "y": 46,
+          "width": 130.609375,
+          "height": 28
+        },
+        "close-settings": {
+          "x": 303,
+          "y": 38,
+          "width": 50,
+          "height": 44
+        },
+        "language-picker": {
+          "x": 258,
+          "y": 90,
+          "width": 95,
+          "height": 44
+        },
+        "language-tr": {
+          "x": 258,
+          "y": 90,
+          "width": 44,
+          "height": 44
+        },
+        "language-en": {
+          "x": 306,
+          "y": 90,
+          "width": 47,
+          "height": 44
+        }
+      }
+    },
+    {
+      "scenario": "iphone-status-bar",
+      "language": "en",
+      "padding": {
+        "top": 20,
+        "bottom": 34,
+        "left": 0,
+        "right": 0
+      },
+      "boxes": {
+        "prepare-header": {
+          "x": 0,
+          "y": 20,
+          "width": 375,
+          "height": 132
+        },
+        "prepare-logo": {
+          "x": 22,
+          "y": 38,
+          "width": 132.390625,
+          "height": 96
+        },
+        "prepare-title": {
+          "x": 166.390625,
+          "y": 46,
+          "width": 132.609375,
+          "height": 28
+        },
+        "close-settings": {
+          "x": 305,
+          "y": 38,
+          "width": 48,
+          "height": 44
+        },
+        "language-picker": {
+          "x": 258,
+          "y": 90,
+          "width": 95,
+          "height": 44
+        },
+        "language-tr": {
+          "x": 258,
+          "y": 90,
+          "width": 44,
+          "height": 44
+        },
+        "language-en": {
+          "x": 306,
+          "y": 90,
+          "width": 47,
+          "height": 44
+        }
+      }
+    },
+    {
+      "scenario": "iphone-notch",
+      "language": "tr",
+      "padding": {
+        "top": 47,
+        "bottom": 34,
+        "left": 0,
+        "right": 0
+      },
+      "boxes": {
+        "prepare-header": {
+          "x": 0,
+          "y": 47,
+          "width": 390,
+          "height": 132
+        },
+        "prepare-logo": {
+          "x": 22,
+          "y": 65,
+          "width": 138.390625,
+          "height": 96
+        },
+        "prepare-title": {
+          "x": 172.390625,
+          "y": 73,
+          "width": 139.609375,
+          "height": 28
+        },
+        "close-settings": {
+          "x": 318,
+          "y": 65,
+          "width": 50,
+          "height": 44
+        },
+        "language-picker": {
+          "x": 273,
+          "y": 117,
+          "width": 95,
+          "height": 44
+        },
+        "language-tr": {
+          "x": 273,
+          "y": 117,
+          "width": 44,
+          "height": 44
+        },
+        "language-en": {
+          "x": 321,
+          "y": 117,
+          "width": 47,
+          "height": 44
+        }
+      }
+    },
+    {
+      "scenario": "iphone-notch",
+      "language": "en",
+      "padding": {
+        "top": 47,
+        "bottom": 34,
+        "left": 0,
+        "right": 0
+      },
+      "boxes": {
+        "prepare-header": {
+          "x": 0,
+          "y": 47,
+          "width": 390,
+          "height": 132
+        },
+        "prepare-logo": {
+          "x": 22,
+          "y": 65,
+          "width": 138.390625,
+          "height": 96
+        },
+        "prepare-title": {
+          "x": 172.390625,
+          "y": 73,
+          "width": 141.609375,
+          "height": 28
+        },
+        "close-settings": {
+          "x": 320,
+          "y": 65,
+          "width": 48,
+          "height": 44
+        },
+        "language-picker": {
+          "x": 273,
+          "y": 117,
+          "width": 95,
+          "height": 44
+        },
+        "language-tr": {
+          "x": 273,
+          "y": 117,
+          "width": 44,
+          "height": 44
+        },
+        "language-en": {
+          "x": 321,
+          "y": 117,
+          "width": 47,
+          "height": 44
+        }
+      }
+    },
+    {
+      "scenario": "iphone-dynamic-island",
+      "language": "tr",
+      "padding": {
+        "top": 59,
+        "bottom": 34,
+        "left": 0,
+        "right": 0
+      },
+      "boxes": {
+        "prepare-header": {
+          "x": 0,
+          "y": 59,
+          "width": 430,
+          "height": 132
+        },
+        "prepare-logo": {
+          "x": 22,
+          "y": 77,
+          "width": 154.390625,
+          "height": 96
+        },
+        "prepare-title": {
+          "x": 188.390625,
+          "y": 85,
+          "width": 163.609375,
+          "height": 28
+        },
+        "close-settings": {
+          "x": 358,
+          "y": 77,
+          "width": 50,
+          "height": 44
+        },
+        "language-picker": {
+          "x": 313,
+          "y": 129,
+          "width": 95,
+          "height": 44
+        },
+        "language-tr": {
+          "x": 313,
+          "y": 129,
+          "width": 44,
+          "height": 44
+        },
+        "language-en": {
+          "x": 361,
+          "y": 129,
+          "width": 47,
+          "height": 44
+        }
+      }
+    },
+    {
+      "scenario": "iphone-dynamic-island",
+      "language": "en",
+      "padding": {
+        "top": 59,
+        "bottom": 34,
+        "left": 0,
+        "right": 0
+      },
+      "boxes": {
+        "prepare-header": {
+          "x": 0,
+          "y": 59,
+          "width": 430,
+          "height": 132
+        },
+        "prepare-logo": {
+          "x": 22,
+          "y": 77,
+          "width": 154.390625,
+          "height": 96
+        },
+        "prepare-title": {
+          "x": 188.390625,
+          "y": 85,
+          "width": 165.609375,
+          "height": 28
+        },
+        "close-settings": {
+          "x": 360,
+          "y": 77,
+          "width": 48,
+          "height": 44
+        },
+        "language-picker": {
+          "x": 313,
+          "y": 129,
+          "width": 95,
+          "height": 44
+        },
+        "language-tr": {
+          "x": 313,
+          "y": 129,
+          "width": 44,
+          "height": 44
+        },
+        "language-en": {
+          "x": 361,
+          "y": 129,
+          "width": 47,
+          "height": 44
+        }
+      }
+    },
+    {
+      "scenario": "iphone-small",
+      "language": "tr",
+      "padding": {
+        "top": 20,
+        "bottom": 0,
+        "left": 0,
+        "right": 0
+      },
+      "boxes": {
+        "prepare-header": {
+          "x": 0,
+          "y": 20,
+          "width": 320,
+          "height": 132
+        },
+        "prepare-logo": {
+          "x": 14,
+          "y": 38,
+          "width": 110.390625,
+          "height": 96
+        },
+        "prepare-title": {
+          "x": 134.390625,
+          "y": 46,
+          "width": 115.609375,
+          "height": 28
+        },
+        "close-settings": {
+          "x": 256,
+          "y": 38,
+          "width": 50,
+          "height": 44
+        },
+        "language-picker": {
+          "x": 211,
+          "y": 90,
+          "width": 95,
+          "height": 44
+        },
+        "language-tr": {
+          "x": 211,
+          "y": 90,
+          "width": 44,
+          "height": 44
+        },
+        "language-en": {
+          "x": 259,
+          "y": 90,
+          "width": 47,
+          "height": 44
+        }
+      }
+    },
+    {
+      "scenario": "iphone-small",
+      "language": "en",
+      "padding": {
+        "top": 20,
+        "bottom": 0,
+        "left": 0,
+        "right": 0
+      },
+      "boxes": {
+        "prepare-header": {
+          "x": 0,
+          "y": 20,
+          "width": 320,
+          "height": 132
+        },
+        "prepare-logo": {
+          "x": 14,
+          "y": 38,
+          "width": 110.390625,
+          "height": 96
+        },
+        "prepare-title": {
+          "x": 134.390625,
+          "y": 46,
+          "width": 117.609375,
+          "height": 28
+        },
+        "close-settings": {
+          "x": 258,
+          "y": 38,
+          "width": 48,
+          "height": 44
+        },
+        "language-picker": {
+          "x": 211,
+          "y": 90,
+          "width": 95,
+          "height": 44
+        },
+        "language-tr": {
+          "x": 211,
+          "y": 90,
+          "width": 44,
+          "height": 44
+        },
+        "language-en": {
+          "x": 259,
+          "y": 90,
+          "width": 47,
+          "height": 44
+        }
+      }
+    },
+    {
+      "scenario": "iphone-landscape",
+      "language": "tr",
+      "padding": {
+        "top": 0,
+        "bottom": 21,
+        "left": 47,
+        "right": 47
+      },
+      "boxes": {
+        "prepare-header": {
+          "x": 47,
+          "y": 0,
+          "width": 750,
+          "height": 124
+        },
+        "prepare-logo": {
+          "x": 69,
+          "y": 10,
+          "width": 288,
+          "height": 96
+        },
+        "prepare-title": {
+          "x": 377,
+          "y": 14,
+          "width": 308,
+          "height": 36
+        },
+        "close-settings": {
+          "x": 697,
+          "y": 10,
+          "width": 78,
+          "height": 44
+        },
+        "language-picker": {
+          "x": 629,
+          "y": 62,
+          "width": 146,
+          "height": 44
+        },
+        "language-tr": {
+          "x": 629,
+          "y": 62,
+          "width": 67,
+          "height": 44
+        },
+        "language-en": {
+          "x": 702,
+          "y": 62,
+          "width": 73,
+          "height": 44
+        }
+      }
+    },
+    {
+      "scenario": "iphone-landscape",
+      "language": "en",
+      "padding": {
+        "top": 0,
+        "bottom": 21,
+        "left": 47,
+        "right": 47
+      },
+      "boxes": {
+        "prepare-header": {
+          "x": 47,
+          "y": 0,
+          "width": 750,
+          "height": 124
+        },
+        "prepare-logo": {
+          "x": 69,
+          "y": 10,
+          "width": 288,
+          "height": 96
+        },
+        "prepare-title": {
+          "x": 377,
+          "y": 14,
+          "width": 308,
+          "height": 36
+        },
+        "close-settings": {
+          "x": 697,
+          "y": 10,
+          "width": 78,
+          "height": 44
+        },
+        "language-picker": {
+          "x": 629,
+          "y": 62,
+          "width": 146,
+          "height": 44
+        },
+        "language-tr": {
+          "x": 629,
+          "y": 62,
+          "width": 67,
+          "height": 44
+        },
+        "language-en": {
+          "x": 702,
+          "y": 62,
+          "width": 73,
+          "height": 44
+        }
+      }
+    },
+    {
+      "scenario": "ipad-portrait",
+      "language": "tr",
+      "padding": {
+        "top": 24,
+        "bottom": 20,
+        "left": 0,
+        "right": 0
+      },
+      "boxes": {
+        "prepare-header": {
+          "x": 0,
+          "y": 24,
+          "width": 1032,
+          "height": 132
+        },
+        "prepare-logo": {
+          "x": 22,
+          "y": 42,
+          "width": 288,
+          "height": 96
+        },
+        "prepare-title": {
+          "x": 330,
+          "y": 46,
+          "width": 590,
+          "height": 36
+        },
+        "close-settings": {
+          "x": 932,
+          "y": 42,
+          "width": 78,
+          "height": 44
+        },
+        "language-picker": {
+          "x": 864,
+          "y": 94,
+          "width": 146,
+          "height": 44
+        },
+        "language-tr": {
+          "x": 864,
+          "y": 94,
+          "width": 67,
+          "height": 44
+        },
+        "language-en": {
+          "x": 937,
+          "y": 94,
+          "width": 73,
+          "height": 44
+        }
+      }
+    },
+    {
+      "scenario": "ipad-portrait",
+      "language": "en",
+      "padding": {
+        "top": 24,
+        "bottom": 20,
+        "left": 0,
+        "right": 0
+      },
+      "boxes": {
+        "prepare-header": {
+          "x": 0,
+          "y": 24,
+          "width": 1032,
+          "height": 132
+        },
+        "prepare-logo": {
+          "x": 22,
+          "y": 42,
+          "width": 288,
+          "height": 96
+        },
+        "prepare-title": {
+          "x": 330,
+          "y": 46,
+          "width": 590,
+          "height": 36
+        },
+        "close-settings": {
+          "x": 932,
+          "y": 42,
+          "width": 78,
+          "height": 44
+        },
+        "language-picker": {
+          "x": 864,
+          "y": 94,
+          "width": 146,
+          "height": 44
+        },
+        "language-tr": {
+          "x": 864,
+          "y": 94,
+          "width": 67,
+          "height": 44
+        },
+        "language-en": {
+          "x": 937,
+          "y": 94,
+          "width": 73,
+          "height": 44
+        }
+      }
+    },
+    {
+      "scenario": "ipad-landscape",
+      "language": "tr",
+      "padding": {
+        "top": 24,
+        "bottom": 20,
+        "left": 0,
+        "right": 0
+      },
+      "boxes": {
+        "prepare-header": {
+          "x": 168,
+          "y": 24,
+          "width": 1040,
+          "height": 124
+        },
+        "prepare-logo": {
+          "x": 190,
+          "y": 34,
+          "width": 288,
+          "height": 96
+        },
+        "prepare-title": {
+          "x": 498,
+          "y": 38,
+          "width": 598,
+          "height": 36
+        },
+        "close-settings": {
+          "x": 1108,
+          "y": 34,
+          "width": 78,
+          "height": 44
+        },
+        "language-picker": {
+          "x": 1040,
+          "y": 86,
+          "width": 146,
+          "height": 44
+        },
+        "language-tr": {
+          "x": 1040,
+          "y": 86,
+          "width": 67,
+          "height": 44
+        },
+        "language-en": {
+          "x": 1113,
+          "y": 86,
+          "width": 73,
+          "height": 44
+        }
+      }
+    },
+    {
+      "scenario": "ipad-landscape",
+      "language": "en",
+      "padding": {
+        "top": 24,
+        "bottom": 20,
+        "left": 0,
+        "right": 0
+      },
+      "boxes": {
+        "prepare-header": {
+          "x": 168,
+          "y": 24,
+          "width": 1040,
+          "height": 124
+        },
+        "prepare-logo": {
+          "x": 190,
+          "y": 34,
+          "width": 288,
+          "height": 96
+        },
+        "prepare-title": {
+          "x": 498,
+          "y": 38,
+          "width": 598,
+          "height": 36
+        },
+        "close-settings": {
+          "x": 1108,
+          "y": 34,
+          "width": 78,
+          "height": 44
+        },
+        "language-picker": {
+          "x": 1040,
+          "y": 86,
+          "width": 146,
+          "height": 44
+        },
+        "language-tr": {
+          "x": 1040,
+          "y": 86,
+          "width": 67,
+          "height": 44
+        },
+        "language-en": {
+          "x": 1113,
+          "y": 86,
+          "width": 73,
+          "height": 44
+        }
+      }
+    }
+  ],
+  "errors": [],
+  "startupPresets": true,
+  "singleModalNavigationRespectInsets": true,
+  "privacyPolicyIsLocal": true,
+  "directPngDownloadKeepsHistoryOpen": true,
+  "restartPreservesSelectionScreen": true,
+  "runningControlsDoubleTapVerified": true,
+  "nativeDeviceVerificationPending": true
+}

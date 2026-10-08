@@ -1,0 +1,34 @@
+node_modules/
+.expo/
+dist/
+ios/
+android/
+*.jks
+*.p8
+*.mobileprovision
+
+# Local settings and signing files
+.env
+.env.*
+!.env.example
+credentials.json
+.npmrc
+.netrc
+*.p12
+*.pem
+*.key
+*.keystore
+*.ipa
+*.apk
+*.aab
+*.provisionprofile
+app.json.before-*
+Tempo-Kontrol.txt
+
+# Generated output and local machine files
+build/
+coverage/
+*.log
+.DS_Store
+Thumbs.db
+.idea/

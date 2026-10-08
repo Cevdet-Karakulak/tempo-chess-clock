@@ -1,0 +1,5 @@
+{
+  "ios": {
+    "NSPhotoLibraryAddUsageDescription": "Tempo needs permission to add photos to save your game summary to Photos."
+  }
+}
