@@ -21,6 +21,12 @@
         "image": "sdk-57"
       }
     },
+    "android-store": {
+      "extends": "production",
+      "android": {
+        "buildType": "app-bundle"
+      }
+    },
     "android-apk": {
       "distribution": "internal",
       "environment": "preview",
