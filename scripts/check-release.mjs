@@ -27,7 +27,7 @@ const modalSource=fs.readFileSync('src/ScreenModal.tsx','utf8');
 assert.ok(modalSource.includes('<SafeAreaProvider')&&modalSource.includes('<SafeAreaView'),'Modals have their own safe-area provider.');
 assert.equal(config.icon,'./assets/tempo-icon.png','Store icon remains separate from the header logo.');
 assert.ok(source.includes('https://tempo-satranc-saati-destek.efekaankarakulak.chatgpt.site/#privacy'));
-console.log('Release configuration: OK · 1.0.0 · iPhone/iPad · PDF/PNG · opaque 1024 icon');
+console.log(`Release configuration: OK · ${config.version} · iPhone/iPad · PDF/PNG · opaque 1024 icon`);
 if(!config.extra?.eas?.projectId)console.log('EAS project will be created by TestFlight-Windows.bat after login.');
 console.log('Signed build, physical device tests and App Store submission require the developer account.');
 

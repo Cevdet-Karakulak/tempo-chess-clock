@@ -26,6 +26,7 @@ app.json.before-*
 Tempo-Kontrol.txt
 
 # Generated output and local machine files
+store-assets/
 build/
 coverage/
 *.log
