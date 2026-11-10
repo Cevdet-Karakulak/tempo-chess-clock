@@ -81,6 +81,11 @@
       ]
     ],
     "icon": "./assets/tempo-icon.png",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#12161A"
+    },
     "locales": {
       "tr": "./locales/tempo-photos-tr.json",
       "en": "./locales/tempo-photos-en.json"

@@ -3,6 +3,7 @@ import { AppState, BackHandler, Linking, Modal, Platform, ScrollView, StatusBar,
 import { SafeAreaProvider, SafeAreaView, initialWindowMetrics } from 'react-native-safe-area-context';
 import {ScreenModal} from './src/ScreenModal';
 import {PreparationLogo} from './src/PreparationLogo';
+import {SplashScreen} from './src/SplashScreen';
 import {createControlConfirmation} from './src/control-confirmation.mjs';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import * as Haptics from 'expo-haptics';
@@ -56,6 +57,7 @@ function ClockApp() {
   const [tab, setTab] = useState<Tab>('presets');
   const [resetDialog, setResetDialog] = useState(false);
   const [historyOpen,setHistoryOpen]=useState(false);
+  const [splashDone,setSplashDone]=useState(false);
   const [photoReport,setPhotoReport]=useState<Report|null>(null);
   const [exportMessage,setExportMessage]=useState('');
   const exportGate=useRef(createExportGate());
@@ -539,6 +541,7 @@ function ClockApp() {
       </>}
     </ScreenModal>
     <Modal visible={resetDialog} transparent animationType="fade" onRequestClose={()=>setResetDialog(false)}><View style={styles.scrim}><View style={[styles.dialog,{backgroundColor:c.bg}]}><Text style={[styles.pageTitle,{color:c.ink}]}>Yeni maç?</Text><Text style={[styles.explanation,{color:c.muted}]}>Süreler ve hamle sayıları sıfırlanacak.</Text><View style={styles.formRow}>{button('Vazgeç',()=>setResetDialog(false))}{button('Sıfırla',()=>{apply(clockRef.current.config);setResetDialog(false);},true,false,'confirm-reset')}</View></View></View></Modal>
+    {!splashDone && <SplashScreen language={prefs.language} onFinish={()=>setSplashDone(true)} />}
   </SafeAreaView></I18nProvider>;
 }
 
