@@ -2,13 +2,13 @@
   "expo": {
     "name": "Tempo · Satranç Saati",
     "slug": "tempo-chess-clock-animated",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "orientation": "default",
     "userInterfaceStyle": "automatic",
     "ios": {
       "supportsTablet": true,
       "bundleIdentifier": "com.floppachesscorp.tempo",
-      "buildNumber": "2",
+      "buildNumber": "3",
       "requireFullScreen": false,
       "config": {
         "usesNonExemptEncryption": false
@@ -46,7 +46,7 @@
     },
     "android": {
       "package": "com.floppachesscorp.tempo",
-      "versionCode": 2,
+      "versionCode": 3,
       "blockedPermissions": [
         "android.permission.READ_MEDIA_IMAGES",
         "android.permission.READ_MEDIA_VIDEO",
