@@ -112,7 +112,7 @@ export function SplashScreen({ onFinish, language = 'tr' }: SplashScreenProps) {
         {/* Footer */}
         <Animated.View style={[styles.footer, { opacity: contentFade }]}>
           <Text style={styles.corpName}>FLOPPATECH CORP</Text>
-          <Text style={styles.corpSub}>PRECISION CHESS ENGINE</Text>
+          <Text style={styles.corpSub}>PRECISION CHESS ENGINE · v1.0.3</Text>
         </Animated.View>
       </Pressable>
     </Animated.View>

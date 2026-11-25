@@ -33,7 +33,7 @@ type Preferences = { dark: boolean; sound: boolean; haptics: boolean; flat: bool
 type Tab = 'presets' | 'simul' | 'tournament' | 'appearance';
 const STORAGE = 'tempo-clock-animated-v1';
 const LIGHT = { bg:'#F1ECE4', ink:'#282C41', muted:'#7B7480', surface:'#FAF7F2', line:'#D9CDCA', live:'#44374F', liveInk:'#FFF4E5', liveMuted:'#D4C5D9', liveMetal:'#ECB887', idle:'#E8E4F0', danger:'#A73135', dangerBg:'#F3DBD6', accent:'#9A583F', metal:'#BD805B', panel0:'#F4E9DC', panel1:'#E9E6F2' };
-const DARK = { bg:'#0C1418', ink:'#F2E9DD', muted:'#A09AAB', surface:'#18262C', line:'#30414A', live:'#EBDDC7', liveInk:'#292233', liveMuted:'#675974', liveMetal:'#9A6045', idle:'#222339', danger:'#FFAB98', dangerBg:'#402330', accent:'#9DE34E', metal:'#4BBEE4', panel0:'#18262C', panel1:'#16232B' };
+const DARK = { bg:'#0A1014', ink:'#F8F2E8', muted:'#B0AAB8', surface:'#162329', line:'#354752', live:'#EBDDC7', liveInk:'#292233', liveMuted:'#675974', liveMetal:'#9A6045', idle:'#222339', danger:'#FFAB98', dangerBg:'#402330', accent:'#A3EC52', metal:'#52C5EA', panel0:'#18262C', panel1:'#16232B' };
 const MONO = Platform.OS==='ios'?'Menlo':Platform.OS==='android'?'monospace':'Courier New';
 const SERIF = Platform.OS==='android'?'serif':'Georgia';
 const now = () => performance.now();
@@ -397,7 +397,7 @@ function ClockApp() {
     const stageCount=(clock.config.stages?.length ?? 0)+1;
     const canTap = ready && (clock.status === 'idle' || (clock.status === 'running' && clock.active === player));
     const label = flagged ? 'BAYRAK DÜŞTÜ':clock.status === 'finished' ? 'RAKİBİN SÜRESİ DOLDU':clock.status === 'paused' ? 'DURAKLATILDI':active ? 'SIRA SENDE':clock.status === 'idle' ? 'BAŞLAMAYA HAZIR':'RAKİP OYNUYOR';
-    return <Pressable testID={`clock-${player}`} onLayout={({nativeEvent:{layout}})=>setFaceSizes(old=>{if(old[player].width===layout.width && old[player].height===layout.height)return old;const next=[...old];next[player]={width:layout.width,height:layout.height};return next;})} accessibilityRole="button" accessibilityLabel={`${roles[player]}, ${formatTime(remaining)}. ${label}`} accessibilityState={{disabled:!canTap}} disabled={!canTap} onPress={()=>pressClock(player)} onPressIn={Platform.OS==='web'?undefined:()=>pressClock(player)} style={({pressed})=>[styles.panel,{backgroundColor:background,borderColor:active?faceMetal:c.line,boxShadow:active?`0 0 18px ${c.metal}30`:'none',opacity:pressed?.9:1}]}>
+    return <Pressable testID={`clock-${player}`} hitSlop={8} onLayout={({nativeEvent:{layout}})=>setFaceSizes(old=>{if(old[player].width===layout.width && old[player].height===layout.height)return old;const next=[...old];next[player]={width:layout.width,height:layout.height};return next;})} accessibilityRole="button" accessibilityLabel={`${roles[player]}, ${formatTime(remaining)}. ${label}`} accessibilityState={{disabled:!canTap}} disabled={!canTap} onPress={()=>pressClock(player)} onPressIn={Platform.OS==='web'?undefined:()=>pressClock(player)} style={({pressed})=>[styles.panel,{backgroundColor:background,borderColor:active?faceMetal:c.line,boxShadow:active?`0 0 18px ${c.metal}30`:'none',opacity:pressed?.9:1}]}>
       <View style={[styles.panelContent,{padding:compact?12:18,minHeight:compact?145:185},flagged && prefs.finale && {padding:0}, player===1 && !prefs.flat && {transform:[{rotate:'180deg'}]}]}>
         {flagged && prefs.finale ? <FlagFinale player={player} role={roles[player]} otherRole={roles[1-player]} width={faceSizes[player].width || availableWidth+36} height={halfHeight} animate={animateFinish} /> : <><View style={styles.panelTop}><View style={styles.roleGroup}><View style={[styles.roleNumber,{borderColor:faceMetal,backgroundColor:active?faceMetal:'transparent'}]}><Text style={{color:active?background:faceMetal,fontFamily:MONO,fontSize:14}}>{player===0?'01':'02'}</Text></View><View><Text style={[styles.role,{color:ink}]}>{roles[player]}</Text><Text style={[styles.moves,{color:faceMuted}]}>{clock.moves[player]} hamle · {stageCount>1?`Aşama ${stageIndex(clock,player)+1}/${stageCount}`:'Tek süre'}</Text></View></View><MechanicalFlag dropped={flagged} compact={compact} player={player} metal={faceMetal} muted={faceMuted}/></View>
         <View style={styles.timeBlock}><Text testID={`time-${player}`} adjustsFontSizeToFit numberOfLines={1} style={[styles.time,{color:clock.status==='running'&&!active?faceMuted:ink,fontSize:panelTimeFont,fontWeight:active?'500':'400',letterSpacing:-panelTimeFont*.02}]}>{display}</Text>
@@ -412,7 +412,7 @@ function ClockApp() {
     </Pressable>;
   }
   function button(label:string, onPress:()=>void, primary=false, disabled=false, id?:string) {
-    return <Pressable testID={id} accessibilityRole="button" accessibilityHint={clock.status==='running'&&id&&['reset','pause','settings'].includes(id)?'Saat çalışırken bu düğmeye iki kez hızlıca dokun.':undefined} disabled={disabled} onPress={onPress} style={({pressed})=>[styles.button,{backgroundColor:primary?c.ink:c.surface,borderColor:c.line,opacity:disabled?.4:pressed?.75:1}]}><Text style={[styles.buttonText,{color:primary?c.bg:c.ink}]}>{label}</Text></Pressable>;
+    return <Pressable testID={id} hitSlop={6} accessibilityRole="button" accessibilityHint={clock.status==='running'&&id&&['reset','pause','settings'].includes(id)?'Saat çalışırken bu düğmeye iki kez hızlıca dokun.':undefined} disabled={disabled} onPress={onPress} style={({pressed})=>[styles.button,{backgroundColor:primary?c.ink:c.surface,borderColor:c.line,opacity:disabled?.4:pressed?.75:1}]}><Text style={[styles.buttonText,{color:primary?c.bg:c.ink}]}>{label}</Text></Pressable>;
   }
   function numeric(label:string, value:string, setter:(s:string)=>void, id:string) {
     return <View style={styles.field}><Text style={[styles.fieldLabel,{color:c.muted}]}>{label}</Text><TextInput testID={id} accessibilityLabel={label} value={value} onChangeText={setter} keyboardType="decimal-pad" selectTextOnFocus maxLength={8} style={[styles.input,{color:c.ink,backgroundColor:c.surface,borderColor:c.line}]} /></View>;
@@ -537,6 +537,7 @@ function ClockApp() {
           </>}
           {button('Destek e-postası',()=>{void Linking.openURL('mailto:floppatechcorp@gmail.com?subject=Tempo').catch(()=>setNotice('Bağlantı açılamadı.'));})}
           <Text translate={false} selectable style={[styles.explanation,{color:c.muted}]}>floppatechcorp@gmail.com</Text>
+          <Text translate={false} style={[styles.explanation,{color:c.muted,fontSize:11,marginTop:4}]}>Tempo v1.0.3 (Build 4) · FloppaTech Corp</Text>
         </ScrollView>
       </>}
     </ScreenModal>
